@@ -55,11 +55,11 @@ class PrintableResume extends React.Component {
             
             <Section title="publications">
                 <Item>
-                    <ItemHeader title="DGEN: A Test Statistic for Detection of General Introgression Scenarios" date="Presented: 21 August 2018" />
+                    <ItemHeader title="DGEN: A Test Statistic for Detection of General Introgression Scenarios" date="Published June 2018" />
                     WABI 2018, <a href="https://doi.org/10.1101/348649 ">https://doi.org/10.1101/348649 </a>
                 </Item>
                 <Item>
-                    <ItemHeader title="ALPHA: A Toolkit for Automated Local Phylogenomic Analyses" date="Published: 19 March 2018" />
+                    <ItemHeader title="ALPHA: A Toolkit for Automated Local Phylogenomic Analyses" date="Published March 2018" />
                     Bioinformatics, bty173, <a href="https://doi.org/10.1093/bioinformatics/bty173">https://doi.org/10.1093/bioinformatics/bty173</a> 
                 </Item>
             </Section>
