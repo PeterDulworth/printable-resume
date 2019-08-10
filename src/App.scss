@@ -1,0 +1,38 @@
+@import './styles/index';
+
+a {
+  color: get-color(blue, core);
+}
+
+.App {
+  position: relative;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.content-wrapper {
+  padding: 0.25in 0.5in 0 0.5in;
+}
+
+.print-wrapper {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+
+  & > a {
+    font-family: "Helvetica Neue";
+    color: get-color(black, 800);
+  }
+}
+
+// animate black hole spinning?
+// animation: App-logo-spin infinite 20s linear;
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

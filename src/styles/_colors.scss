@@ -1,0 +1,35 @@
+$colors: (
+    transparent: (
+        core: transparent
+    ),
+    white: (
+        core: white
+    ),
+    black: (
+        core: #000,
+        900: #2d2d2d,
+        800: #4b4b4b,
+        700: #6f6f6f,
+        600: #909090,
+        500: #ccc,
+        400: #ececec,
+        300: #f2f2f2,
+        200: #f6f6f6,
+        100: #f9f9f9,
+        10: #2d2d2d,
+    ),
+    red: (
+        a11y: #db183f,
+        core: #f53d4e
+    ),
+    blue: (
+        a11y: #0044e3,
+        brand: #2164f3,
+        core: #085ff7,
+        highlight: #1497ff
+    )
+);
+
+@function get-color($color-name, $color-variant: core) {
+    @return map-get(map-get($colors, $color-name), $color-variant);
+}

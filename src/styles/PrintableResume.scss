@@ -1,0 +1,44 @@
+.PrintableResume {
+    animation: rotate-in 1 500ms linear;
+    box-sizing: border-box;
+    background: white;
+    width: 8.5in;
+    height: 11in;
+    padding: 0.25in 0.35in;
+
+    font-size: 11pt;
+
+    &--title {
+        display: flex;
+        justify-content: center;
+        font-size: 19pt;
+    }
+}
+
+@keyframes rotate-in {
+    0% {
+      transform: rotate(-4deg);
+    }
+    14% {
+        transform: rotate(0deg);
+    }
+    28% {
+        transform: rotate(3deg);
+    }
+    43% {
+        transform: rotate(0deg);
+    }
+    57% {
+        transform: rotate(-2deg);
+    }
+    71% {
+        transform: rotate(0deg);
+    }
+    86% {
+        transform: rotate(1deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+  }
+  

@@ -1,0 +1,14 @@
+.Skills {
+    margin-top: 8pt;
+    &--columns {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &--column-title {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+    }
+}
