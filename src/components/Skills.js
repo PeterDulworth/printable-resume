@@ -1,25 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Bullets from './Bullets';
+import Section from './Section';
 
-const Skills = ({ columnTitles, children }) => {
+const Skills = ({ categories }) => {
     return (
-        <div className="Skills">
-            <div className="Skills--columns">
-                {
-                    children.map((child, i) => 
-                        <div key={i} className="Skills--column">
-                            <div className="Skills--column-title">{columnTitles[i]}</div>
-                            {child}
-                        </div>)
-                }
+        <Section title="skills">
+            <div className="Skills">
+                <div className="Skills--columns">
+                    {
+                        categories.map((skillCategory, skillCategoryIdx) => <SkillColumn {...skillCategory} key={skillCategoryIdx} />)
+                    }       
+                </div>
             </div>
+        </Section>
+    );
+};
+
+export const SkillColumn = ({ category, items}) => {
+    return (
+        <div className="Skills--column">
+            <div className="Skills--column-title">{category}</div>
+            <Bullets items={items} />
         </div>
     );
 };
 
 Skills.propTypes = {
-    columnTitles: PropTypes.array.isRequired,
-    children: PropTypes.array.isRequired,
+    categories: PropTypes.array.isRequired
 };
 
 export default Skills;

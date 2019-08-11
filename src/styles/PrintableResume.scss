@@ -13,6 +13,10 @@
         justify-content: center;
         font-size: 19pt;
     }
+
+    code:focus {
+        outline: none;
+    }
 }
 
 @keyframes rotate-in {
