@@ -16,14 +16,11 @@ class PrintableResume extends React.Component {
     }
 
     async componentDidMount() {
-        const resp = await fetch('http://peterdulworth.com/api/printable-resume.json', { method: 'GET' });
-        // const resp = await fetch('http://peterdulworth.com/resume/resumeData.json');
+        // const resp = await fetch('http://peterdulworth.com/api/resumeData/peterdulworth.json');
+        const resp = await fetch('http://peterdulworth.com/api/resumeData/sophiajefferson.json');
         const body = await resp.json();
-        // console.log(resp);
-        console.log(body);
         this.setState({ model: body });
         Prism.highlightAll()
-
     }
 
     render() {
@@ -46,8 +43,8 @@ class PrintableResume extends React.Component {
         sections.splice(skillsIndex, 0, skills);
 
         return <div className="PrintableResume">
-            <header className="PrintableResume--title"><span>Peter Dulworth</span></header>
-            <WhoAmI />
+            <header className="PrintableResume--title"><span>{this.state.model.name}</span></header>
+            <WhoAmI personalInfo={this.state.model.personalInfo} />
             {sections}
             {/* <pre>
                 <code className="language-javascript" contenteditable="true">
