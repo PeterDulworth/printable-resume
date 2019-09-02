@@ -4,7 +4,7 @@ import PrintableResume from './components/PrintableResume';
 import ReactToPrint from 'react-to-print';
 
 const App = () => {
-  const componentRef = useRef();
+  const componentRef = useRef(null);
 
   return (
     <div className="App">

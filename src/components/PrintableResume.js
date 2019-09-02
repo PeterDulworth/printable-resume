@@ -16,8 +16,7 @@ class PrintableResume extends React.Component {
     }
 
     async componentDidMount() {
-        // const resp = await fetch('http://peterdulworth.com/api/resumeData/peterdulworth.json');
-        const resp = await fetch('https://peterdulworth.com/api/resumeData/sophiajefferson.json');
+        const resp = await fetch('http://peterdulworth.com/api/resumeData/peterdulworth.json');
         const body = await resp.json();
         this.setState({ model: body });
         Prism.highlightAll()
